@@ -24,8 +24,7 @@
             </div>
         </div>
         <div class="row">
-
-            <form action="https://formsubmit.co/coyle@aatruckandbus.com" method="POST">
+            <form class="row" action="https://formsubmit.co/coyle@aatruckandbus.com https://formsubmit.co/dancoyle321@gmail.com" method="POST">
 
                 <h1 class="text-center">Order Form</h1>
 
@@ -99,26 +98,6 @@
     </div>
 
     <script src="bootstrap.bundle.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "coyle@aatruckandbus.com",
-                Password: "Plugin11",
-                To: 'coyle@aatruckandbus.com',
-                From: document.getElementById("email").value,
-                Subject: "Order From Academy",
-                Body: "First Name: " + document.getElementById("fname").value 
-                + "<br> Last Name: " + document.getElementById("lname").value
-                + "<br> Email: " + document.getElementById("email").value
-                + "<br> Parts: " + document.getElementById("part").value
-                + "<br> Quantities: " + document.getElementById("quantity").value
-            }).then(
-                message => alert("Message Sent Successfully")
-            );
-        }
-    </script>
 </body>
 
 </html>
