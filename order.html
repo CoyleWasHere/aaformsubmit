@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AA Truck and Bus Systems</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body style="background-color: burlywood;">
+    <div class="container">
+        <div class="row text-center">
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <form action="https://formsubmit.co/coyle@aatruckandbus.com" method="POST">
+
+                <h1 class="text-center">Order Form</h1>
+
+                <div class="col-6">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+
+                <div class="col-6">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+
+                <div class="col-8">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email..">
+                </div>
+
+                <label>Branch</label>
+                <select>
+                    <option>BRAINTREE</option>
+                    <option>WEST WARWICK</option>
+                    <option>BRIDGEPORT</option>
+                    <option>HOBOKEN</option>
+                    <option>SECAUCUS</option>
+                    <option>LEONARDO</option>
+                    <option>TOMS RIVER</option>
+                    <option>WESTAMPTON</option>
+                    <option>BALTIMORE</option>
+                    <option>CAPITOL HEIGHTS</option>
+                    <option>BRISTOW</option>
+                    <option>DURHAM</option>
+                    <option>CHARLOTTE</option>
+                    <option>ATLANTA</option>
+                    <option>JACKSONVILLE</option>
+                    <option>ORLANDO</option>
+                    <option>WEST PALM BEACH</option>
+                    <option>FT. LAUDERDALE</option>
+                    <option>CLEARWATER</option>
+                    <option>MIAMI</option>
+                </select>
+                <div class="text-center">
+                    <label for="subject" class="text-center"><b>Place Your Order</b></label>
+                </div>
+                <table class="col-12">
+                    <tr>
+                        <td>
+                            <div class="text-center">
+                                <label>Part #</label>
+                            </div>
+                            <textarea id="part" name="part" placeholder="Write Part Numbers"
+                                style="height:200px"></textarea>
+                        </td>
+                        <td>
+                            <div class="text-center">
+                                <label>Quantity</label>
+                            </div> <textarea id="quantity" name="quantity" placeholder="Write Quantities"
+                                style="height:200px"></textarea>
+                        </td>
+                    </tr>
+                </table>
+
+                <input type="submit" value="Submit">
+                <button type="submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "coyle@aatruckandbus.com",
+                Password: "Plugin11",
+                To: 'coyle@aatruckandbus.com',
+                From: document.getElementById("email").value,
+                Subject: "Order From Academy",
+                Body: "First Name: " + document.getElementById("fname").value 
+                + "<br> Last Name: " + document.getElementById("lname").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Parts: " + document.getElementById("part").value
+                + "<br> Quantities: " + document.getElementById("quantity").value
+            }).then(
+                message => alert("Message Sent Successfully")
+            );
+        }
+    </script>
+</body>
+
+</html>
