@@ -9,64 +9,59 @@
 
 <body style="background-color: burlywood;">
     <div class="container">
-        <div class="row text-center">
-        </div>
         <div class="row">
-            <div class="col-12">
-                <div class="text-center">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="text-center">
-                </div>
-            </div>
-        </div>
-        <div class="row">
+            <h1 class="text-center">Order Form</h1>
             <form class="row" action="https://formsubmit.co/coyle@aatruckandbus.com" method="POST">
-                <input type="hidden" name="_cc" value="dancoyle321@gmail.com">
+                <!-- Honeypot -->
+                <input type="text" name="_honey" style="display: none;">
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
 
-                <h1 class="text-center">Order Form</h1>
+                <!-- Add success.html After Email Activation Success Message Link
+                <input tpye="hidden" name="_next" value="https://coylewashere.github.io/aaformsubmit/success.html">
+                -->
+
+                <!-- CC Multiple Emails -->
+                <input type="hidden" name="_cc" value="dancoyle321@gmail.com,dancoyle321@gmail.com">
 
                 <div class="col-6">
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <input type="text" id="fname" name="First&nbsp;Name" placeholder="Your name.." required>
                 </div>
 
                 <div class="col-6">
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <input type="text" id="lname" name="Last&nbsp;Name" placeholder="Your last name.." required>
                 </div>
 
                 <div class="col-8">
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" placeholder="Your email..">
+                    <input type="email" id="email" name="Email" placeholder="Your email.." required>
                 </div>
 
                 <div class="col-8">
-                    <label>Branch</label>
-                    <select>
-                        <option>BRAINTREE</option>
-                        <option>WEST WARWICK</option>
-                        <option>BRIDGEPORT</option>
-                        <option>HOBOKEN</option>
-                        <option>SECAUCUS</option>
-                        <option>LEONARDO</option>
-                        <option>TOMS RIVER</option>
-                        <option>WESTAMPTON</option>
-                        <option>BALTIMORE</option>
-                        <option>CAPITOL HEIGHTS</option>
-                        <option>BRISTOW</option>
-                        <option>DURHAM</option>
-                        <option>CHARLOTTE</option>
-                        <option>ATLANTA</option>
-                        <option>JACKSONVILLE</option>
-                        <option>ORLANDO</option>
-                        <option>WEST PALM BEACH</option>
-                        <option>FT. LAUDERDALE</option>
-                        <option>CLEARWATER</option>
-                        <option>MIAMI</option>
+                    <label for="location">Branch</label>
+                    <select name="Branch" id="branch">
+                        <option value="BRAINTREE">BRAINTREE</option>
+                        <option value="WEST WARWICK">WEST WARWICK</option>
+                        <option value="BRIDGEPORT">BRIDGEPORT</option>
+                        <option value="HOBOKEN">HOBOKEN</option>
+                        <option value="SECAUCUS">SECAUCUS</option>
+                        <option value="LEONARDO">LEONARDO</option>
+                        <option value="TOMS RIVER">TOMS RIVER</option>
+                        <option value="WESTAMPTON">WESTAMPTON</option>
+                        <option value="BALTIMORE">BALTIMORE</option>
+                        <option value="CAPITOL HEIGHTS">CAPITOL HEIGHTS</option>
+                        <option value="BRISTOW">BRISTOW</option>
+                        <option value="DURHAM">DURHAM</option>
+                        <option value="CHARLOTTE">CHARLOTTE</option>
+                        <option value="ATLANTA">ATLANTA</option>
+                        <option value="JACKSONVILLE">JACKSONVILLE</option>
+                        <option value="ORLANDO">ORLANDO</option>
+                        <option value="WEST PALM BEACH">WEST PALM BEACH</option>
+                        <option value="FT. LAUDERDALE">FT. LAUDERDALE</option>
+                        <option value="CLEARWATER">CLEARWATER</option>
+                        <option value="MIAMI">MIAMI</option>
                     </select>
                 </div>
 
@@ -79,13 +74,13 @@
                             <div class="text-center">
                                 <label>Part #</label>
                             </div>
-                            <textarea id="part" name="part" placeholder="Write Part Numbers"
+                            <textarea id="part" name="Parts" placeholder="Write Part Numbers Seperated by a comma. 4707Q, 33033, A001.830.51.72, 1070368"
                                 style="height:200px"></textarea>
                         </td>
                         <td>
                             <div class="text-center">
                                 <label>Quantity</label>
-                            </div> <textarea id="quantity" name="quantity" placeholder="Write Quantities"
+                            </div> <textarea id="quantity" name="Quantity" placeholder="Write Correlating Quantity Seperated by a comma. 4, 4, 2, 8"
                                 style="height:200px"></textarea>
                         </td>
                     </tr>
