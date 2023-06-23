@@ -72,7 +72,7 @@ input[type=text], select, textarea {
 
   .brand-title {
     font-size: 1.5rem;
-    margin: .5rem;
+    margin: 1rem;
   }
 
   .navbar-links ul {
@@ -114,7 +114,7 @@ input[type=text], select, textarea {
     border-radius: 5px;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 675px) {
     .toggle-button {
         display: flex;
     }
@@ -145,4 +145,44 @@ input[type=text], select, textarea {
     .navbar-links.active {
         display: flex;
     }
+  }
+
+  #address {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  #addPart {
+    margin-bottom: 15px;
+    background-color: rgb(85, 246, 85);
+  }
+
+  #partNumber {
+    margin-bottom: 15px;
+    background-color: rgb(85, 246, 85);
+  }
+
+  #quantity1 {
+    margin-bottom: 15px;
+    background-color: rgb(246, 150, 85);
+  }
+
+  #description1 {
+    margin-bottom: 15px;
+    background-color: rgb(85, 152, 246);
+  }
+
+  #partNumber input{
+    margin-bottom: 15px;
+    background-color: rgb(85, 246, 85);
+  }
+
+  #quantity1 input{
+    margin-bottom: 15px;
+    background-color: rgb(246, 150, 85);
+  }
+
+  #description1 input{
+    margin-bottom: 15px;
+    background-color: rgb(85, 152, 246);
   }

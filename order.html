@@ -28,15 +28,15 @@
     <div class="container">
         <div class="row">
             <h1 class="text-center">Order Form</h1>
-            <form class="row" action="https://formsubmit.co/3c0c5d0dbf62276fd1a9225885d8af32" method="POST">
+            <form class="row" id="myForm" action="https://formsubmit.co/coyle@aatruckandbus.com" method="POST"
+                onsubmit="return validateForm()">
                 <!-- Honeypot -->
                 <input type="text" name="_honey" style="display: none;">
                 <!-- Disable Captcha -->
                 <input type="hidden" name="_captcha" value="false">
 
-                <!-- Add success.html After Email Activation Success Message Link
+                <!-- Add success.html Success Message Link-->
                 <input tpye="hidden" name="_next" value="https://coylewashere.github.io/aaformsubmit/success.html">
-                -->
 
                 <!-- CC Multiple Emails -->
                 <input type="hidden" name="_cc" value="dancoyle321@gmail.com">
@@ -83,31 +83,53 @@
                 </div>
 
                 <div class="text-center">
-                    <label for="subject" class="text-center"><b>Place Your Order</b></label>
+                    <label for="subject" class="text-center"><b>Place Your Order                 
+                        <div class=>
+                        <input type="button" id="addPart" value="Add Part" onclick="addInput()">
+                    </div></b></label>
                 </div>
-                <table class="col-12">
+                <!--<table class="col-12" id="orderList">
                     <tr>
                         <td>
                             <div class="text-center">
                                 <label>Part #</label>
                             </div>
-                            <textarea id="part" name="Parts" placeholder="Write Part Numbers Seperated by a comma. 4707Q, 33033, A001.830.51.72, 1070368"
+                            <textarea id="part" name="Parts"
+                                placeholder="Write Part Numbers Seperated by a comma. 4707Q, 33033, A001.830.51.72, 1070368"
                                 style="height:200px"></textarea>
                         </td>
                         <td>
                             <div class="text-center">
                                 <label>Quantity</label>
-                            </div> <textarea id="quantity" name="Quantity" placeholder="Write Correlating Quantity Seperated by a comma. 4, 4, 2, 8"
+                            </div> <textarea id="quantity" name="Quantity"
+                                placeholder="Write Correlating Quantity Seperated by a comma. 4, 4, 2, 8"
                                 style="height:200px"></textarea>
                         </td>
                         <td>
                             <div class="text-center">
                                 <label>Description</label>
-                            </div> <textarea id="description" name="Description" placeholder="Write a Brief Description about the parts.."
+                            </div> <textarea id="description" name="Description"
+                                placeholder="Write a Brief Description about the parts.."
                                 style="height:200px"></textarea>
                         </td>
                     </tr>
-                </table>
+                </table>-->
+
+                <div id="partNumber" name="Part&nbsp;Number" class="col-3 text-center">
+                    <p>Part #</p>
+                    <!--<label for="partNumber">Part #</label>
+                    <input type="text" id="partNumber" name="Part&nbsp;Number" placeholder="Part #" required>-->
+                </div>
+                <div id="quantity1" name="Quantity" class="col-3 text-center">
+                    <p>Quantity</p>
+                    <!--<label for="quantity">Quantity</label>
+                    <input type="text" id="quantity" name="Quantity" placeholder="Quantity" required>-->
+                </div>
+                <div id="description1" name="Description" class="col-6 text-center">
+                    <p>Description</p>
+                    <!--<label for="description">Description</label>
+                    <input type="text" id="description" name="Description" placeholder="Brief Description" required>-->
+                </div>
 
                 <input type="submit" value="Submit">
 
@@ -115,9 +137,9 @@
         </div>
     </div>
     </div>
+</div>
     </div>
-    </div>
-
+    <script src="script.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
 </body>
 
