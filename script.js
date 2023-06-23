@@ -40,18 +40,18 @@ function addInput(){
     let input1 = document.createElement("input");
     input1.placeholder = "Part #";
     input1.className = "col-12 text-center"
-    container1.localName = "Part " + number
+    // container1.localName = "Part " + number
     container1.appendChild(input1);
 
     let input2 = document.createElement("input");
     input2.placeholder = "Quantity";
     input2.className = "col-12 text-center"
-    container1.localName = "Quantity " + number
+    // container1.localName = "Quantity " + number
     container2.appendChild(input2);
 
     let input3 = document.createElement("input");
     input3.placeholder = "Brief Description";
     input3.className = "col-12 text-center"
-    container1.localName = "Description " + number
+    // container1.localName = "Description " + number
     container3.appendChild(input3);
 }
