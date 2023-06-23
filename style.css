@@ -151,38 +151,3 @@ input[type=text], select, textarea {
     display: grid;
     grid-template-columns: auto auto auto;
   }
-
-  #addPart {
-    margin-bottom: 15px;
-    background-color: rgb(85, 246, 85);
-  }
-
-  #partNumber {
-    margin-bottom: 15px;
-    background-color: rgb(85, 246, 85);
-  }
-
-  #quantity1 {
-    margin-bottom: 15px;
-    background-color: rgb(246, 150, 85);
-  }
-
-  #description1 {
-    margin-bottom: 15px;
-    background-color: rgb(85, 152, 246);
-  }
-
-  #partNumber input{
-    margin-bottom: 15px;
-    background-color: rgb(85, 246, 85);
-  }
-
-  #quantity1 input{
-    margin-bottom: 15px;
-    background-color: rgb(246, 150, 85);
-  }
-
-  #description1 input{
-    margin-bottom: 15px;
-    background-color: rgb(85, 152, 246);
-  }
