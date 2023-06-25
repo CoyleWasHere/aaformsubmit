@@ -31,6 +31,7 @@ toggleButton.addEventListener("click", () => {
 const container1 = document.getElementById('partNumber');
 const container2 = document.getElementById('quantity');
 const container3 = document.getElementById('description');
+let number = 1
 
 // Call addInput() function on button click
 function addInput(){
@@ -39,14 +40,14 @@ function addInput(){
     let partNumber = document.createElement("input");
     partNumber.className = "col-12 text-center";
     partNumber.setAttribute("type","text");
-    partNumber.setAttribute("name","Part");
+    partNumber.setAttribute("name","Part " + number);
     partNumber.setAttribute("placeholder","Part #");
     container1.appendChild(partNumber);
 
     let quantity = document.createElement("input");
     quantity.className = "col-12 text-center";
     quantity.setAttribute("type","text");
-    quantity.setAttribute("name","Quantity");
+    quantity.setAttribute("name","Quantity " + number);
     quantity.setAttribute("placeholder","Quantity");
     container2.appendChild(quantity);
 
@@ -54,9 +55,11 @@ function addInput(){
     description.placeholder = "Brief Description";
     description.className = "col-12 text-center";
     description.setAttribute("type","text");
-    description.setAttribute("name","Description");
+    description.setAttribute("name","Description " + number);
     description.setAttribute("placeholder","Description");
     container3.appendChild(description);
+
+    number += 1
 }
 
 function removeInput(){
@@ -75,4 +78,5 @@ function removeInput(){
       container3.removeChild(input_tag3[(input_tag3.length) - 1]);
     }
 
+    number -= 1
   }
