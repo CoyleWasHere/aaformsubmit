@@ -40,14 +40,14 @@ function addInput(){
     let partNumber = document.createElement("input");
     partNumber.className = "col-12 text-center";
     partNumber.setAttribute("type","text");
-    partNumber.setAttribute("name","Part&nbsp;#" + number);
+    partNumber.setAttribute("name","Part #" + number);
     partNumber.setAttribute("placeholder","Part #" + number);
     container1.appendChild(partNumber);
 
     let quantity = document.createElement("input");
     quantity.className = "col-12 text-center";
     quantity.setAttribute("type","text");
-    quantity.setAttribute("name","Quantity&nbsp;#" + number);
+    quantity.setAttribute("name","Quantity #" + number);
     quantity.setAttribute("placeholder","Quantity " + number);
     container2.appendChild(quantity);
 
@@ -55,7 +55,7 @@ function addInput(){
     description.placeholder = "Brief Description";
     description.className = "col-12 text-center";
     description.setAttribute("type","text");
-    description.setAttribute("name","Description&nbsp;#" + number);
+    description.setAttribute("name","Description #" + number);
     description.setAttribute("placeholder","Description " + number);
     container3.appendChild(description);
 
@@ -81,10 +81,11 @@ function removeInput(){
     number -= 1
   }
 
+  const poNumber = document.getElementById("po")
 
   function customMessage() {
 
-    const poNumber = document.getElementById("po")
+    const po = poNumber.getAttribute("name")
 
-    return "Thank You For Your Order, Use " + poNumber + " To Track This Order"
+    return "Thank You For Your Order, Use " + po + " To Track This Order"
   }
