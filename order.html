@@ -34,10 +34,10 @@
                 <input type="text" name="_honey" style="display: none;">
 
                 <!-- Disable Captcha -->
-                <!-- <input type="hidden" name="_captcha" value="false"> -->
+                <input type="hidden" name="_captcha" value="false">
 
                 <!-- Auto response -->
-                <input type="hidden" name="_autoresponse" value="customMessage()">
+                <input type="hidden" name="_autoresponse" value="Thank You For Your Order, For Updates Send This Orders PO # to gerald@aatruckandbus.com">
 
                 <!-- Add success.html Success Message Link-->
                 <input type="hidden" name="_next" value="https://aatruckandbus.github.io/academy/success.html">
@@ -48,6 +48,8 @@
                 <!-- CC Multiple Emails -->
                 <!-- <input type="hidden" name="_cc" value="gerald@aatruckandbus.com,candelario@aatruckandbus.com,rios@aatruckandbus.com,bill@allsysbrake.com"> -->
 
+                <input type="hidden" name="Order&nbsp;id" value="<?php echo microtime(true)*10000; ?>"/>
+                
                 <div class="col-6">
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="First&nbsp;Name" placeholder="Your name.." required>
@@ -60,7 +62,7 @@
 
                 <div class="col-8">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email.." required>
+                    <input type="email" id="email" name="Email" placeholder="Your email.." required>
                 </div>
 
                 <div class="col-8">
@@ -91,7 +93,7 @@
 
                 <div class="col-8">
                     <label for="po">PO #</label>
-                    <input type="text" id="po" name="PO #" placeholder="PO #.." required>
+                    <input type="text" id="po" name="PO&nbsp;#" placeholder="PO #.." required>
                 </div>
 
                 <div class="text-center">
@@ -145,7 +147,7 @@
                     <input type="text" id="description" name="Description" placeholder="Brief Description" required>-->
                 </div>
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Place Order">
 
             </form>
         </div>
