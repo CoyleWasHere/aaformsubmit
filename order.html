@@ -18,7 +18,6 @@
         <div class="navbar-links">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="order.html">Order</a></li>
                 <li><a href="specials.html">Specials</a></li>
             </ul>
@@ -28,18 +27,25 @@
     <div class="container">
         <div class="row">
             <h1 class="text-center">Order Form</h1>
-            <form class="row" id="myForm" action="https://formsubmit.co/coyle@aatruckandbus.com" method="POST"
+            <form class="row" id="myForm" action="https://formsubmit.co/3c0c5d0dbf62276fd1a9225885d8af32" method="POST"
                 onsubmit="return validateForm()">
                 <!-- Honeypot -->
                 <input type="text" name="_honey" style="display: none;">
+
                 <!-- Disable Captcha -->
-                <input type="hidden" name="_captcha" value="false">
+                <!-- <input type="hidden" name="_captcha" value="false"> -->
+
+                <!-- Auto response -->
+                <input type="hidden" name="_autoresponse" value="your custom message">
 
                 <!-- Add success.html Success Message Link-->
-                <input type="hidden" name="_next" value="https://coylewashere.github.io/aaformsubmit/success.html">
+                <input type="hidden" name="_next" value="https://aatruckandbus.github.io/academy/success.html">
+
+                <!-- Email Subject Line-->
+                <input type="hidden" name="_subject" value="New Order from Academy!">
 
                 <!-- CC Multiple Emails -->
-                <input type="hidden" name="_cc" value="gerald@aatruckandbus.com,candelario@aatruckandbus.com,rios@aatruckandbus.com,bill@allsysbrake.com">
+                <!-- <input type="hidden" name="_cc" value="gerald@aatruckandbus.com,candelario@aatruckandbus.com,rios@aatruckandbus.com,bill@allsysbrake.com"> -->
 
                 <div class="col-6">
                     <label for="fname">First Name</label>
@@ -53,7 +59,7 @@
 
                 <div class="col-8">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="Email" placeholder="Your email.." required>
+                    <input type="email" id="email" name="email" placeholder="Your email.." required>
                 </div>
 
                 <div class="col-8">
@@ -80,6 +86,11 @@
                         <option value="CLEARWATER">CLEARWATER</option>
                         <option value="MIAMI">MIAMI</option>
                     </select>
+                </div>
+
+                <div class="col-8">
+                    <label for="po">PO #</label>
+                    <input type="text" id="po" name="PO #" placeholder="PO #.." required>
                 </div>
 
                 <div class="text-center">
@@ -144,7 +155,6 @@
     <footer>
         <h4>Site Map</h4>
         <p><a href="index.html">Home</a></p>
-        <p><a href="about.html">About</a></p>
         <p><a href="order.html">Order</a></p>
         <p><a href="specials.html">Specials</a></p>
         <small>
